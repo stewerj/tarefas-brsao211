@@ -13,26 +13,13 @@ while True:
          raise Exception ()
       
       notas.append(nota)
-
-
+      soma = 0
+      for nota in notas:
+          soma += nota
+          media = soma / len(notas)
+          print(len(notas))
+          print(f"Média final: {media:.2f}")
     except ValueError:
-        print("Você deve deve digitar apenas números.")
+        print("Você deve digitar apenas números.")
     except Exception:
-        print("Nota invalida.")
-
-    soma = 0
-   
-   for nota in notas:
-    soma += nota
-    
-    média = soma / len(notas)
-    
-    print(f"Média final: {média:.2f}")
-
-    except ValueError:
-        print("Você deve deve digitar apenas números.")
-    except Exception:
-        print("Nota invalida.")
-    except ZeroDivisionError:
-        print("Você deve digitar pelo menos uma nota.")
-    
+        print("Nota inválida. Digite uma nota entre 0 e 10.")
