@@ -15,7 +15,7 @@ while True:
             if caractere.isdigit():
                 tem_numero = True
                 break
-            if caractere in '0123456789'
+            if caractere in '0123456789':
                 tem_numero = True
                 break
 
@@ -23,5 +23,6 @@ while True:
             raise Exception ("Senha deve conter pelo menos um número.")
         print("Senha válida.")
         break
+
     except Exception as e:
-        print(f"Senha inválida: {e}")
+        print(f"erro: {e} Tente Novamente!")
