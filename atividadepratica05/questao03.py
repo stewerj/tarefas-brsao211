@@ -10,5 +10,4 @@ valor = float (input ("Digite o valor do produto: " ))
 porcentagem = float (input ("Digite a porcentagem de desconto: " ))
 
 desconto = calcular_desconto(valor, porcentagem)
-
-print (f"O valor com desconto é : R$ {desconto:.2f}")
+print (f"O valor do desconto é : R$ {desconto:.2f}")
