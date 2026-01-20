@@ -1,7 +1,7 @@
 import random
 import string
 
-def gerar_senha(tamanho=8):
+def gerar_senha(tamanho_senha=8):
     caracteres = string.ascii_letters + string.digits + "@!*#$%&"
     senha = ''
     for i in range(tamanho_senha):
@@ -9,6 +9,6 @@ def gerar_senha(tamanho=8):
     return senha
 
 tamanho = int(input("Digite o tamanho da senha: "))
-senha = tamanho_senha(tamanho)
+senha = gerar_senha(tamanho)
 
 print(f"Senha: {senha}")
