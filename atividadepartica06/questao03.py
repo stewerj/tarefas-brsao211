@@ -4,6 +4,7 @@ def consultar_cep(cep):
     url = f"https://viacep.com.br/ws/{cep}/json/"
     try:
         resposta = requests.get(url)
+        resposta.raise_for_status()
         dados = resposta.json()
 
         if'erro' in dados:
@@ -11,12 +12,12 @@ def consultar_cep(cep):
         
         logradouro = dados['logradouro']
         bairro = dados['bairro']
-        localidade = dados[localidade]
+        localidade = dados['localidade']
         uf = dados['uf']
 
-        return f"Logradouro: {logradouro}\inBairro:{bairro}\inLocalidade:{localidade}\inUF: {uf}"
+        return f"Logradouro: {logradouro}\nBairro: {bairro}\nLocalidade: {localidade}\nUF: {uf}"
     except requests.RequestException as é:
-        return f"erro ao consultar CEP: {e}"
+        return f"Erro ao consultar CEP:"
     
 cep = input ("Digite o CEP: ")
 resultado = consultar_cep(cep)
