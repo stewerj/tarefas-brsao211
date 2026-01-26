@@ -2,12 +2,12 @@ import csv
 
 def escrever_csv(nome_arquivo, dados):
     try:
-        with open(nome_arquivo, mode='w', newline='', encoding = 'wtf-8') as arquivo_csv:
+        with open(nome_arquivo, mode='w', newline='', encoding = 'utf-8') as arquivo_csv:
             escritor = csv.writer(arquivo_csv)
             escritor.writerow(['Nome', 'Idade', 'Cidade'])
             for linha in dados:
                 escritor.writerow(linha)
-        return "dados escritos com sucesso no arquivo. {nome_aruivo} " 
+            return "dados escritos com sucesso no arquivo {nome_aruivo} " 
         
     except Exception as e:
         return f"Erro ao criar o arquivo CSV: {e}"
