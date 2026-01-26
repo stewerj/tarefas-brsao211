@@ -5,7 +5,7 @@ def processar_logs_treinamento(arquivo_log):
         leitor= pd.read_csv(arquivo_log)
         media = leitor['tempo_execucao'].mean()
         desvio_padrao = leitor['tempo_execucao'].std()
-        return  f"Media: {media}, Desvio_Padrâo: {desvio_padrao}"
+        return  f"Media: {media:.2f}, Desvio_Padrâo: {desvio_padrao:.2f}"
                                 
         
     except FileNotFoundError:
