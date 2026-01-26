@@ -20,6 +20,7 @@ while True:
             if caractere in ("0123456789"):
 
                 tem_numero = True
+            
                 break
 
         if tem_numero == False:
