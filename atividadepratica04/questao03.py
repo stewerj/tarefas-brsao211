@@ -15,11 +15,10 @@ while True:
             if caractere.isdigit():
                 tem_numero = True
                 break
-<<<<<<< HEAD:atividadeprarica04/questao03.py
-            if caractere in '0123456789':
-=======
+
+
             if caractere in ("0123456789"):
->>>>>>> 84d2ae6b006d356d80063c1e10ead6a509090290:atividadepratica04/questao03.py
+
                 tem_numero = True
                 break
 
